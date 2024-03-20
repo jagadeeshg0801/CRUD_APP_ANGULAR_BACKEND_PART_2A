@@ -1,0 +1,23 @@
+.emp-row .td-cell {
+  display: inline-flex;
+  width: 20%;
+  border-top: 1px solid;
+  padding: 5px 0;
+}
+
+.emp-header .td-cell {
+  display: inline-flex;
+  width: 20%;
+  border-top: 1px solid;
+  padding: 5px 0;
+  font-weight: 600;
+}
+
+li.emp-row:last-child .td-cell {
+  border-bottom: 1px solid;
+}
+
+.emp-row,
+.emp-header {
+  list-style: none;
+}
