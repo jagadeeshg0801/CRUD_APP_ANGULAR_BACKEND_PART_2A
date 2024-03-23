@@ -1,5 +1,25 @@
 <div class="container">
-  <h5>Employees</h5>
+  <div class="row ">
+    <form [formGroup]="empForm" (ngSubmit)="onAddOrUpdateEmployeeDetails()"
+      class="col-12 card p-2 mb-3">
+      <h3>Employee Details</h3>
+      <div class="input-group-text">
+        <input class="form-control" formControlName="name"
+          placeholder="Employee Name" />
+
+        <input class="form-control" formControlName="city"
+          placeholder="Employee City" />
+
+        <input class="form-control" formControlName="phone"
+          placeholder="Employee Phone" />
+
+        <input class="form-control" formControlName="email"
+          placeholder="Employee Email" />
+        <button class="btn btn-danger m-1" type="reset">Reset</button>
+        <button class="btn btn-primary m-1" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
   <ul>
     <li class="emp-header">
       <div class="td-cell"> Name</div>
@@ -13,34 +33,13 @@
       <div class="td-cell"> {{emp.city}}</div>
       <div class="td-cell"> {{emp.phone}}</div>
       <div class="td-cell"> {{emp.email}}</div>
-      <div class="td-cell"><span class="link" (click)="editEmployee(emp)">Edit</span></div>
+      <div class="td-cell"><span class="link "
+          (click)="editEmployee(emp)">Edit</span>
+          <span class="link" style="color:red; margin-left: 10px" (click)="deleteEmployee(emp)">Delete</span>
+        </div>
     </li>
   </ul>
 
-<hr />
-<div class="row ">
-  <form [formGroup]="empForm" (ngSubmit)="onAddOrUpdateEmployeeDetails()" class="col-6 card">
-    <h3>Employee Details</h3>
-    <div class="form-group" >
-      <label>Name</label>
-      <input class="form-control" formControlName="name" placeholder="Employee Name"/>
-    </div>
-    <div class="form-group">
-      <label>City</label>
-      <input class="form-control" formControlName="city" placeholder="Employee City" />
-    </div>
-    <div class="form-group">
-      <label>Phone</label>
-      <input class="form-control" formControlName="phone" placeholder="Employee Phone"/>
-    </div>
-    <div class="form-group">
-      <label>EmailId</label>
-      <input class="form-control" formControlName="email" placeholder="Employee Email"/>
-    </div>
-    <div class="col-12 mt-2" style="float: right;">
-      <button class="btn btn-danger m-1" type="reset">Reset</button>
-      <button class="btn btn-primary m-1" type="submit">Submit</button>
-    </div>
-  </form>
-</div>
+  <hr />
+
 </div>

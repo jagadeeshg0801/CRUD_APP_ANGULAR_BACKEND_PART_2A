@@ -55,6 +55,15 @@ export class EmployeeComponent implements OnInit {
     this.empForm.patchValue(emp);
   }
 
+  deleteEmployee(emp:Employee){
+    this.empService.deleteEmployee(emp.id).subscribe((res:any)=>{
+      if(res){
+        alert('Employee details deleted Successfully!!..'+emp.id);
+        this.getEmployeeList();
+      }
+    })
+  }
+
   buildForm(){
     this.empForm = new FormGroup({
       name: new FormControl(''),

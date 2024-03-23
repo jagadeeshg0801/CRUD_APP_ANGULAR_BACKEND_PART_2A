@@ -1,23 +1,43 @@
 .emp-row .td-cell {
   display: inline-flex;
   width: 20%;
-  border-top: 1px solid;
+  border-top: 2px solid #00ffde;
   padding: 5px 0;
+  /* background: #5df8ef24; */
+  color: #595994;
+}
+
+li.emp-row:nth-child(even) {
+  background: #5df8ef24;
+}
+
+li.emp-row:nth-child(odd) {
+  background: #8ebdbb24;
+}
+
+.input-group-text .form-control {
+  margin-right: 8px;
 }
 
 .emp-header .td-cell {
   display: inline-flex;
   width: 20%;
-  border-top: 1px solid;
+  border-top: 3px solid #66d8ee;
   padding: 5px 0;
   font-weight: 600;
+  background: #5858d126;
+  color: #3d7e8b;
 }
 
 li.emp-row:last-child .td-cell {
-  border-bottom: 1px solid;
+  border-bottom: 3px solid #66d8ee;
 }
 
 .emp-row,
 .emp-header {
   list-style: none;
+}
+
+.link{
+  cursor: pointer;
 }
