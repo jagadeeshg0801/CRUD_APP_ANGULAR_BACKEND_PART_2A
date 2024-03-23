@@ -22,13 +22,15 @@
   </div>
   <ul>
     <li class="emp-header">
+      <div class="td-cell"> S.NO</div>
       <div class="td-cell"> Name</div>
       <div class="td-cell"> City</div>
       <div class="td-cell">Phone Number</div>
       <div class="td-cell"> EmailId</div>
       <div class="td-cell">Actions</div>
     </li>
-    <li *ngFor="let emp of empList" class="emp-row">
+    <li *ngFor="let emp of empList;index as i" class="emp-row">
+      <div class="td-cell"> {{i+1}}</div>
       <div class="td-cell"> {{emp.name}}</div>
       <div class="td-cell"> {{emp.city}}</div>
       <div class="td-cell"> {{emp.phone}}</div>
@@ -40,6 +42,5 @@
     </li>
   </ul>
 
-  <hr />
 
 </div>

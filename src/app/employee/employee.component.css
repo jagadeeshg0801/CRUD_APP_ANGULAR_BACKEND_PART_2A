@@ -1,8 +1,8 @@
 .emp-row .td-cell {
   display: inline-flex;
-  width: 20%;
+  width: 22%;
   border-top: 2px solid #00ffde;
-  padding: 5px 0;
+  padding: 5px 2px;
   /* background: #5df8ef24; */
   color: #595994;
 }
@@ -21,9 +21,9 @@ li.emp-row:nth-child(odd) {
 
 .emp-header .td-cell {
   display: inline-flex;
-  width: 20%;
+  width: 22%;
   border-top: 3px solid #66d8ee;
-  padding: 5px 0;
+  padding: 5px 2px;
   font-weight: 600;
   background: #5858d126;
   color: #3d7e8b;
@@ -40,4 +40,16 @@ li.emp-row:last-child .td-cell {
 
 .link{
   cursor: pointer;
+}
+
+.emp-row .td-cell:first-child, .emp-header .td-cell:first-child{
+  width: 5%;
+}
+
+.emp-row .td-cell:last-child, .emp-header .td-cell:last-child{
+  width: 7%;
+}
+ul{
+  margin-left: 0;
+  padding: 0;
 }
